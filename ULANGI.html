@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Syariah</title>
+  <link rel="stylesheet" href="LATWEB.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div id="loader" class="loader"></div>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="container">
+    <div class="logo-area">
+      <img src="logo.png" alt="Hotel Logo" class="logo-img">
+      <span class="logo-text">HOTEL SYARIAH</span>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="dark-toggle" id="dark-toggle">🌙</div>
+  </div>
+</nav>
+
+<!-- Home -->
+<section id="home" class="home-section">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>ENJOY YOUR EXPERIENCE!</h1>
+  </div>
+
+  <div class="booking-box">
+    <form class="booking-form">
+      <div class="booking-field">
+        <label for="checkin">Check-in</label>
+        <input type="date" id="checkin" required>
+      </div>
+      <div class="booking-field">
+        <label for="checkout">Check-out</label>
+        <input type="date" id="checkout" required>
+      </div>
+      <div class="booking-field">
+        <label for="guests">Tamu</label>
+        <select id="guests" required>
+          <option>1</option><option>2</option><option>3</option><option>4+</option>
+        </select>
+      </div>
+      <a href="#services" class="btn-book">Pesan Sekarang</a>
+      
+    </form>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="services-section fade-up">
+  <div class="container">
+    <div class="section-label">Class</div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="superior.jpg" alt="Superior Room" class="service-img">
+        <h2>SUPERIOR</h2>
+        <ul class="room-info">
+          <li>💰 Rp450.000 / malam</li>
+          <li>📏 20 m² | 🍽️ Tanpa sarapan</li>
+          <li>AC • TV • WiFi • Air panas</li>
+        </ul>
+        <button class="btn-pilih">Pilih Ini</button>
+      </div>
+
+      <div class="service-card">
+        <img src="deluxe.jpg" alt="Deluxe Room" class="service-img">
+        <h2>DELUXE</h2>
+        <ul class="room-info">
+          <li>💰 Rp650.000 / malam</li>
+          <li>📏 28 m² | 🍽️ Termasuk 2 breakfast</li>
+          <li>AC • TV Kabel • WiFi cepat • Minibar</li>
+        </ul>
+        <button class="btn-pilih">Pilih Ini</button>
+      </div>
+
+      <div class="service-card">
+        <img src="premier.jpg" alt="Premium Room" class="service-img">
+        <h2>PREMIUM</h2>
+        <ul class="room-info">
+          <li>💰 Rp950.000 / malam</li>
+          <li>📏 35 m² | 🍽️ Termasuk 2 breakfast</li>
+          <li>Bathtub & View kota</li>
+        </ul>
+        <button class="btn-pilih">Pilih Ini</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="about-section fade-up">
+  <div class="container">
+    <img src="syariah.png" alt="Brand Logo" class="about-logo">
+    <div class="section-label">Our Brands</div>
+
+    <div class="about-gallery">
+      <img src="NK.jpg" alt="Tentang 1" class="about-img">
+      <img src="YT.jpg" alt="Tentang 2" class="about-img">
+      <img src="AK.jpg" alt="Tentang 3" class="about-img">
+    </div>
+
+    <div class="about-content">
+      <div class="about-text">
+        <h1>Locate</h1>
+        <p>Jl. Adi Sucipto No.KM 9.5, Blulukan, Colomadu, Karanganyar, Jawa Tengah</p>
+        <h2>Click to location</h2>
+        <a href="https://maps.app.goo.gl/tevYEKqbjV7eA8DM9" target="_blank">
+          <img src="L.jpg" alt="Lokasi Hotel" class="map-img">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact-section fade-up">
+  <div class="container">
+    <div class="section-label">Contact</div>
+    <form class="contact-form">
+      <div class="form-row">
+        <input type="text" placeholder="Nama" class="form-input" required>
+        <input type="email" placeholder="Email" class="form-input" required>
+      </div>
+      <textarea placeholder="Pesan" class="form-textarea"></textarea>
+      <button type="submit" class="btn-submit">Kirim</button>
+      <a href="https://wa.me/6285868566802" target="_blank" class="btn-whatsapp">💬 Chat via WhatsApp</a>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Hotel Syariah. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Script -->
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const darkToggle = document.getElementById('dark-toggle');
+
+  // Toggle menu
+  menuToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    navMenu.classList.toggle('active');
+  });
+  document.addEventListener('click', e => {
+    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+      navMenu.classList.remove('active');
+    }
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      navMenu.classList.remove('active');
+    });
+  });
+
+  // Animasi muncul saat scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Dark mode otomatis dan manual
+  function applyDarkMode(auto = true) {
+    const now = new Date();
+    const hours = now.getHours();
+    const dark = hours >= 18 || hours < 6;
+    if (auto && dark) document.body.classList.add('dark-mode');
+  }
+  applyDarkMode();
+
+  darkToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    darkToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  });
+
+  
+// ===============================
+// FITUR TAMBAHAN
+// ===============================
+
+// 1️⃣ Animasi muncul saat scroll
+const revealElements = document.querySelectorAll('.fade-up');
+const revealOnScroll = () => {
+  revealElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('show');
+    }
+  });
+};
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+// 2️⃣ Highlight menu aktif saat scroll
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-menu a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 80;
+    if (pageYOffset >= sectionTop) current = section.getAttribute('id');
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// Efek klik tombol "Pilih Ini"
+document.querySelectorAll('.btn-pilih').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const room = btn.parentElement.querySelector('h2').textContent;
+    alert(`Anda memilih kamar: ${room}. Silakan lanjut ke proses booking.`);
+  });
+});
+
+const btnBook = document.querySelector('.btn-book');
+btnBook.addEventListener('click', (e) => {
+  const checkin = document.getElementById('checkin').value;
+  const checkout = document.getElementById('checkout').value;
+
+  if (!checkin || !checkout) {
+    e.preventDefault();
+    alert('Mohon isi tanggal Check-in dan Check-out terlebih dahulu!');
+  }
+});
+
+document.querySelectorAll('.btn-pilih').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const room = btn.parentElement.querySelector('h2').textContent;
+    alert(`Anda memilih kamar: ${room}`);
+    window.scrollTo({ top: document.querySelector('#home').offsetTop, behavior: 'smooth' });
+  });
+});
+
+window.addEventListener('load', () => {
+  document.getElementById('loader').style.display = 'none';
+});
+
+</script>
+</body>
+</html>
