@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Sederhana</title>
+</head>
+<body>
+  <script>
+    // Meminta input dari pengguna
+    var angka1 = parseFloat(prompt("Masukkan angka 1:"));
+    var angka2 = parseFloat(prompt("Masukkan angka 2:"));
+    var operator = prompt("Masukkan operator (+, -, *, /):");
+
+    var hasil;
+
+    // Menghitung berdasarkan operator yang dimasukkan
+    if (operator === "+") {
+      hasil = angka1 + angka2;
+    } else if (operator === "-") {
+      hasil = angka1 - angka2;
+    } else if (operator === "*") {
+      hasil = angka1 * angka2;
+    } else if (operator === "/") {
+      if (angka2 === 0) {
+        hasil = "Tidak bisa dibagi dengan 0!";
+      } else {
+        hasil = angka1 / angka2;
+      }
+    } else {
+      hasil = "Operator tidak dikenali!";
+    }
+
+    // Menampilkan hasil
+    alert("Hasil: " + hasil);
+  </script>
+</body>
+</html>
