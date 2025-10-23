@@ -1,0 +1,390 @@
+/* ==============================
+   STYLE HOTEL SYARIAH (Web-JS)
+============================== */
+
+/* Reset bawaan */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Warna tema */
+:root {
+  --warna-utama: #ffc107;   /* kuning Bootstrap */
+  --warna-teks: #333;
+  --warna-bg: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+.nav-menu .nav-link {
+  color: #ddd;
+  margin: 0 8px;
+  transition: all 0.3s;
+}
+.nav-menu .nav-link:hover {
+  color: var(--warna-utama);
+}
+.nav-menu .nav-link.active {
+  color: var(--warna-utama);
+  border-bottom: 2px solid var(--warna-utama);
+}
+
+/* Section umum */
+section {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+/* ===========================
+   HOME SECTION (Diperbaiki)
+=========================== */
+#home {
+  background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1950&q=80') 
+              center/cover no-repeat;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Gambar tetap muncul saat Dark Mode */
+body.dark-mode #home {
+  background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1950&q=80') 
+              center/cover no-repeat !important;
+}
+
+#home .btn-warning {
+  background-color: var(--warna-utama);
+  border: none;
+  color: #222;
+  font-weight: 600;
+  transition: 0.3s;
+}
+#home .btn-warning:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+/* SERVICES */
+#services h2 {
+  letter-spacing: 1px;
+}
+#services .p-4 {
+  transition: all 0.3s ease-in-out;
+}
+#services .p-4:hover {
+  background-color: #ffc107;
+  color: #222;
+  transform: translateY(-8px);
+}
+
+/* ABOUT */
+#about {
+  color: var(--warna-teks);
+}
+.about-chart {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-top: 30px;
+}
+.about-chart h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* CONTACT */
+#contact {
+  background: #212529;
+  color: white;
+}
+#contact h2 {
+  color: var(--warna-utama);
+}
+
+/* FOOTER */
+footer {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  background-color: #343a40;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 2rem;
+  }
+  .about-chart {
+    width: 100%;
+  }
+}
+
+/* ==============================
+   DARK MODE STYLING (update)
+============================== */
+body.dark-mode {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode .navbar-brand {
+  color: #ffc107 !important;
+}
+
+body.dark-mode .nav-link {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .nav-link:hover {
+  color: #ffc107 !important;
+}
+
+body.dark-mode .nav-link.active {
+  color: #ffc107 !important;
+  border-bottom-color: #ffc107 !important;
+}
+
+body.dark-mode section {
+  background-color: #1e1e1e !important;
+  color: #f8f9fa !important;
+}
+
+body.dark-mode #services .p-4 {
+  background-color: #222 !important;
+  color: #f8f9fa !important;
+  border-color: #333;
+}
+
+body.dark-mode #about,
+body.dark-mode #contact {
+  color: #f8f9fa !important;
+}
+
+body.dark-mode #contact {
+  background-color: #0d0d0d !important;
+}
+
+body.dark-mode footer {
+  background-color: #1a1a1a !important;
+  color: #f8f9fa !important;
+}
+
+body.dark-mode .about-chart {
+  background-color: #222;
+  color: #f8f9fa;
+}
+
+body.dark-mode .btn-outline-warning {
+  color: #ffc107;
+  border-color: #ffc107;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p {
+  color: #f8f9fa !important;
+}
+
+/* ==============================
+   TRANSISI HALUS DARK MODE
+============================== */
+body, 
+.navbar, 
+section, 
+footer, 
+.btn, 
+.nav-link, 
+h1, h2, h3, h4, p {
+  transition: 
+    background-color 0.5s ease, 
+    color 0.5s ease, 
+    border-color 0.5s ease;
+}
+
+/* ===========================
+   PARALLAX EFFECT
+=========================== */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ===========================
+   REVEAL ANIMATION
+=========================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===========================
+   BACK TO TOP BUTTON
+=========================== */
+#toTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+#toTop:hover {
+  background-color: #0056b3;
+}
+
+/* ===========================
+   GLOW BUTTON HOVER
+=========================== */
+.btn-glow {
+  transition: box-shadow 0.3s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+}
+
+/* Efek glow berdenyut lembut */
+.btn-glow.pulse {
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(0, 123, 255, 0.9); }
+  100% { box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); }
+}
+
+/* ===========================
+   BOOKING FORM STYLING
+=========================== */
+#booking form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#booking form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode #booking {
+  background-color: #121212 !important;
+}
+body.dark-mode #booking form {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+  border-color: #333;
+}
+body.dark-mode #booking label {
+  color: #ffc107;
+}
+
+/* ===========================
+   PREVIEW KAMAR STYLING
+=========================== */
+#preview .card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#preview .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+#preview img {
+  height: 230px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+body.dark-mode #preview {
+  background-color: #121212;
+}
+body.dark-mode #preview .card {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+}
+
+:root {
+  --utama: #c7a34b; /* emas lembut */
+  --gelap: #1a1a1a; /* hitam elegan */
+  --terang: #f9f6ef; /* putih gading */
+}
+
+body {
+  background-color: var(--terang);
+  color: var(--gelap);
+  font-family: 'Playfair Display', serif;
+}
+
+.btn-outline-warning {
+  color: var(--utama);
+  border-color: var(--utama);
+}
+.btn-outline-warning:hover {
+  background-color: var(--utama);
+  color: white;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.navbar-brand {
+  font-weight: bold;
+  color: var(--gelap);
+}
+.navbar a.nav-link {
+  color: var(--gelap);
+  transition: 0.3s;
+}
+.navbar a.nav-link:hover {
+  color: var(--utama);
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.card img {
+  height: 250px;
+  object-fit: cover;
+}
